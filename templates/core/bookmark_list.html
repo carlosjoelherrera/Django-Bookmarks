@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/new">nuevo</a>
+<h1>Bookmarks</h1>
+<ul>
+{% for bookmark in object_list %}
+    <li><a href="{{ bookmark.url }}">{{ bookmark.title }} - {{ bookmark.url }}</a></li>
+{% empty %}
+    <li>No bookmarks yet.</li>
+{% endfor %}
+</ul>
+</body>
+</html>
